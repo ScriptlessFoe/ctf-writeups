@@ -17,7 +17,7 @@
   - a loop over a set of if-statements performing operations in `main`
 - given the hint of a custom opcode table- its pretty clear what the program is doing: `main` is an interpreter for the custom instructions found in the large data chunk.
 
-![Image](attachments/Pasted image 20260928184605.png)
+![Image](<attachments/Pasted image 20260928184605.png>)
 
 ### Solving it
 
@@ -188,7 +188,7 @@ waiting for the light to pass.
 - While the title is not so important, the image clearly is, so we run `pdfimages` on the pdf and extract the image. 
 - Of course this image is also seemingly blank, but some quick image analysis using the `imagemagick` suite shows that there is some slightly less than white pixels within the image, and further image process reveals this following image:
 
-![Image](attachments/Pasted image 20260928201557.png)
+![Image](<attachments/Pasted image 20260928201557.png>)
 
 #### Puzzle 2
 
@@ -204,7 +204,7 @@ slash the fingerprint, and it'll know what you mean.
 - In the end, the hint of the name "Ferryman", which searched in the CTF discord, revealed a discord bot named "ferryman_vt"
 - the rest of the poem explains what to do - "whisper" meant sending a DM to the bot, and "slash the fingerprint" literally meant `/fingerprint`, as in a bot command, revealing the next poem:
 
-![Image](attachments/Pasted image 20260928202249.png)
+![Image](<attachments/Pasted image 20260928202249.png>)
 
 #### Puzzle 3
 
@@ -223,7 +223,7 @@ he answers to it everywhere, all the time.
 
 - after taking "ferryman_vt" to some username searching websites, I discovered an account on Twitter/X created in September 2026, the month of the CTF. This was a promising lead, although there was nothing on the actual profile besides a short bio.
 
-![Image](attachments/Pasted image 20260928203223.png)
+![Image](<attachments/Pasted image 20260928203223.png>)
 
 - Searching the images revealed them to be unrelated to the search
   - other note: not sure if this is the actual source, but the banner image appears to be at the very least used as the background image of a [short EXEcutable Mania (sonic.exe Friday Night Funkin' Horror Mod) fan animation](https://x.com/djawesomeyt/status/1887184180124983702/)
@@ -235,7 +235,7 @@ he answers to it everywhere, all the time.
 - The actually intended path was supposed to be through Instagram - however this is made more difficult for username sites to search as Instagram to view profiles and the such. 
 - The Instagram for the account has a single post as shown:
 
-![Image](attachments/Pasted image 20260928210039.png)
+![Image](<attachments/Pasted image 20260928210039.png>)
 
 - This involves a classing bit of hidden messaging. As hinted to with the lines "read the letters leading", taking the first letter from each line in the message spells out "TOCKFERR", and the -X implies we are hopping over to Twitter/X
 - the Ferry (@tockferr) Twitter account has some post history as follows:
@@ -250,7 +250,7 @@ PINNED - Thursday well spent. [clock emoji] (yes, I'm the same everywhere - try 
 
 - One of these posts contains a gif comment from Geneva (@timepiece_ferr). The similar "ferr" ending implies this is another profile worth investigating:
 
-![Image](attachments/Pasted image 20260928210815.png)
+![Image](<attachments/Pasted image 20260928210815.png>)
 
 - Note: Screenshots were taken AFTER the infrastructure for the CTF was taken down. The link in the post used be for https://tinyurl.com/vantage-job
 - The first thing that jumps out is the 8 character alphanumeric code in the bio of the account. Due to the TinyURL link in the post, this immediately reminded me of the short codes used for these URL shortening services. Trying this out led to a pastebin of a massive amount of encoded text.
@@ -259,11 +259,11 @@ PINNED - Thursday well spent. [clock emoji] (yes, I'm the same everywhere - try 
 
 - Following the TinyURL led to this paste file: [Link to pastebin](https://paste.d4rk4shes.com/)
 
-![Image](attachments/Pasted image 20260928211749.png)
+![Image](<attachments/Pasted image 20260928211749.png>)
 
 - This file was absolutely massive, and looked roughly like it was encoded in Base64, so I took the first line and placed it into a base64 decoder:
 
-![Image](attachments/Pasted image 20260928212006.png)
+![Image](<attachments/Pasted image 20260928212006.png>)
 
 - This revealed some "UNICODE" metadata, which, after ignoring all the non-UTF-8 characters, reveals our flag.
 - An alternative way to solve this was to recognize the header `/9j/` (or just put it into CyberChef) as a `.jpeg` header. Converting the text into a jpeg image allows you to read the properties of the image directly (either through Windows properties or `exiftool`)

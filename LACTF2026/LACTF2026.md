@@ -41,7 +41,7 @@ lactf{Wh47_d0_y0u_637_wh3n_y0u_cr055_4_r363x_4nd_4_n0n06r4m?_4_r363x06r4m!}
 `
 Side note: I didn't bother with checking my work by plugging it into the original website, but after the challenge I did so. This is what it looks like:
 
-![Image](attachments/Pasted image 20260208205434.png)
+![Image](<attachments/Pasted image 20260208205434.png>)
 
 Not sure what I was expecting to be frank.
 
@@ -60,7 +60,7 @@ holy crap its tetris
 - while playing the game, at any time `e` can be pressed to export the game, which produces a game code and its check sum.
 - a brief look into the provided source code clearly identifies a winning board. a little extra digging will reveal the numerical representation of each piece type/color, including `0`s for empty space. following the Tetris guiding, this is what it looks like:
 
-![Image](attachments/Pasted image 20260208082903.png)
+![Image](<attachments/Pasted image 20260208082903.png>)
 
 - even without in-depth Tetris knowledge, obtaining this winning board looks utterly insane. However, someone with better understanding of Tetris and its mechanics can easily identify the sheer impossibility of this shape.
   - This shape is called the "Reverse Secret Grade". while difficult, the general zig-zag shape is possible.
