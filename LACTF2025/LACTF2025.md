@@ -136,6 +136,7 @@ The password to get to the flag is 6 characters long, with each character (repre
 ### Solution
 
 The first thing I did was to create a program that would calculate the number of steps it would take to reach `1` given any number. Here's the C++ code I wrote for this:
+
 ```cpp=
 #include <iostream>
 using namespace std;
@@ -294,6 +295,7 @@ Taking a look at the challenge description, it looks like this program supposed 
 First things first, lets try running it and seeing what happens:\
 ![image](https://hackmd.io/_uploads/Hyl73yPYJe.png)\
 Ah, so we are greeted by a small 7x7 grid made of `_` and `#`. One cell of the grid is wrapped by `[]`. Testing out various key presses reveals various controls:
+
 - The `WASD` keys moves the cursor (represented by `[]`) orthogonally.
 - The `X` key changes the `_` highlighted by the cursor to a `#` and vice versa (notably it does not change the `#`s that are on the grid to begin with).
 - The `C` key spits out an `Incorrect!` when pressed (this is likely used for checking our work in the puzzle).
@@ -378,7 +380,7 @@ With this information in mind, we can now solve the puzzle!
 
 Now that we know the rules of the puzzle that we have to solve, lets write out the grid with the assigned values from `n` for each cell, and write the grid as shown when run in the program for good measure.
 
-```
+```txt
 1 1 0 0 0 0 0   [_]_ _ _ _ _ _
 0 1 0 2 0 0 0    _ # _ _ _ _ _
 0 0 3 1 0 0 0    _ _ _ # _ _ _
